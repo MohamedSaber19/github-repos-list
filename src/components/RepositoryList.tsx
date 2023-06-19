@@ -50,8 +50,15 @@ const RepositoryList = ({
     }
     if (searchQuery && repositories.length === 0) {
       return (
-        <div className="text-center p-4">
+        <div className="text-center p-4 text-sm text-gray-400">
           No repositories found with that name.
+        </div>
+      );
+    }
+    if (!searchQuery && repositories.length === 0) {
+      return (
+        <div className="text-center p-4 text-sm text-gray-400">
+          Type the repo name and press Enter or the search button.
         </div>
       );
     }
@@ -85,7 +92,7 @@ const RepositoryList = ({
             "pagination mt-8 lg:mt-16 flex flex-wrap justify-center items-center"
           }
           activeClassName={"bg-white text-black"}
-          pageClassName="flex justify-center items-center  cursor-pointer hover:bg-white hover:text-black m-6 bg-accent-2"
+          pageClassName="flex justify-center items-center  cursor-pointer hover:bg-white hover:text-black m-2 bg-accent-2"
           pageLinkClassName="p-4"
           previousClassName="bg-accent-2 py-2 px-4 m-3  justify-center items-center flex cursor-pointer hover:text-primary text-sm"
           nextClassName="bg-accent-2 py-2 px-4 m-3 justify-center items-center flex cursor-pointer hover:text-primary text-sm"

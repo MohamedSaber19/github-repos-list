@@ -1,4 +1,4 @@
-import { PAGE_SIZE } from "@/constants";
+import { PAGE_SIZE } from "../constants";
 
 /**
  * Fetches repositories from the GitHub API based on a query string.
